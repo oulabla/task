@@ -64,7 +64,7 @@ def second_task_by_name():
         LEFT JOIN department ON (department.id = mtm.department_id)
         LEFT JOIN salary ON(salary.user_id = user.id)
     GROUP BY user.id
-    ORDER BY user.name, departments_count
+    ORDER BY user.name, departments_count DESC
     """
     cursor.execute(sql)
     print(list(map(lambda x: x[0], cursor.description)))
