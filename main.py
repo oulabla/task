@@ -38,7 +38,7 @@ def first_task():
     """
     cursor.execute(sql)
     print(list(map(lambda x: x[0], cursor.description)))
-    return cursor.fetchall()
+    print(cursor.fetchall())
     
 
 # -- Задание 2
@@ -68,7 +68,7 @@ def second_task_by_name():
     """
     cursor.execute(sql)
     print(list(map(lambda x: x[0], cursor.description)))
-    return cursor.fetchall()
+    print(cursor.fetchall())
 
 # --  2. + Сгруппировать по грейду, вывести:
 # --   * Количество сотрудником с этим грейдом
@@ -100,12 +100,12 @@ def second_task_by_grade():
     """
     cursor.execute(sql)
     print(list(map(lambda x: x[0], cursor.description)))
-    return cursor.fetchall()
+    print(cursor.fetchall())
 
 
 print("TASK 1")
-print(first_task())
+first_task()
 print("TASK 2 by name")
-print(second_task_by_name())
+second_task_by_name()
 print("TASK 2 by grade")
-print(second_task_by_grade())
+second_task_by_grade()
